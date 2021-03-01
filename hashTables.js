@@ -7,6 +7,17 @@
 //  -- Seperate Chaning: Store data in the same index then loop when need to get value
 //  -- Linear Probing: Look ahead for the next empty slot
 
+// Pseudocode for SET
+// - Accepts a key and value
+// - Hashes the key
+// - Stores the key-value pair in the hash table via seperate chaining
+
+// Pseudocode for GET
+// - Accepts a key 
+// - Hashes the key
+// - Retrieves the key-value pair in the hash table
+// - If the key isnt found, return undefined
+
 // ----------------------------------------------------------------------------
 
 
@@ -24,5 +35,13 @@ class HashTable {
             total = (total * WEIRD_PRIME + value) % this.keyMap.length
         }
         return total
+    }
+
+    set(key,value) {
+        let index = this._hash(key)
+        if(!this.keyMap[index]) {
+            this.keyMap[index] = []
+        }
+        this.keyMap[index].push([key, value])
     }
 }
