@@ -70,3 +70,25 @@ function collectOddValues(arr) {
 // Tips for Pure Recursion
 // - Use slice, spread operator, and concat that makes copies so you do not mutitate them
 
+const getPermutations = (input) => {
+    let result = [];
+  
+    const permute = (arr, e = []) => {
+      if (arr.length === 0) {
+        return result.push(e)
+      } else {
+        for (let i = 0; i < arr.length; i++) {
+          let curr = arr.slice();
+          let next = curr.splice(i, 1);
+          permute(curr.slice(), e.concat(next))
+       }
+     }
+   }
+  
+   permute(input)
+  
+   return result
+  }
+  
+//   getPermutations([9,7,2,3])
+
