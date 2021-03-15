@@ -17,5 +17,18 @@ function twoNumberSum(array, targetSum) {
   }
 
 //   nested array means O(n^2) and for space is O(1)
+// To make it better o(n) time and space
 
+function twoNumberSum(array, targetSum) {
+    const nums = {}
+      for (const number of array) {
+          const match = targetSum - number
+          if(match in nums) {
+              return [match, number]
+          } else {
+              nums[number] = true
+          }
+      }
+      return []
+  }
   
