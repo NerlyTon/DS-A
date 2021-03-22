@@ -39,3 +39,17 @@ longestConsecutive = (nums) => {
         }
     }
 }
+
+// is a valid subsequence one array compared to the other
+
+function isValidSubsequence(array, sequence) {
+    
+  let aIdx = 0
+  let sIdx = 0
+  
+  while (aIdx < array.length && sIdx < sequence.length) {
+      if (array[aIdx] === sequence[sIdx]) sIdx++
+          aIdx++
+      }
+      return sIdx === sequence.length
+}
