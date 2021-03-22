@@ -53,3 +53,23 @@ function isValidSubsequence(array, sequence) {
       }
       return sIdx === sequence.length
 }
+
+// Search a longer string to find if shorter string is in there
+
+const ls = "wowomgwomg" 
+const ss = "omg"
+
+subStringCounter = (ls, ss) => {
+    let counter = 0
+    for(let i = 0; i < ls.length; i++) {
+        for(let j = 0; j < ss.length; j++) {
+            if(ss[j] !== ls[i + j]) {
+                break
+            } if(j === ss.length - 1) {
+                count ++
+                
+            }
+        }
+    }
+    return counter 
+}
