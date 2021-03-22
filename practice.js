@@ -16,3 +16,26 @@ class Solution {
         return counter
     }
 }
+
+// longest consecutive sequence
+
+longestConsecutive = (nums) => {
+    let set = new Set()    
+    for(let num of nums) {
+        set.add(num)
+    }    
+    
+    let longestSeq = 0    
+    for(let num of set) {
+         if (!set.has(num - 1)){
+            let currentNum = num
+            let currentSeq = 1            
+         
+            while (set.has(currentNum + 1)) {
+                currentSeq += 1
+                currentNum += 1
+            }
+            longestSeq = Math.max(longestSeq, currentSeq)
+        }
+    }
+}
