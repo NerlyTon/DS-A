@@ -97,3 +97,22 @@ return [...map.values()].filter(m => m.length > 1)
 //         return keysArray
 //     }
 // }
+
+// Code to find if there is a duplicate to return true or false
+
+let s = "abcdefd"
+
+class Solution {
+    solve(s) {
+        const hash = new Map()
+        let arr = s.split("").sort()
+        for (let i = 0; i < arr.length; i++){
+            if (!hash.has(arr[i])){
+               hash.set(arr[i])
+            } else {
+                    return false
+            }
+        }
+        return true
+    }
+}
