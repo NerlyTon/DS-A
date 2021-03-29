@@ -1,0 +1,1 @@
+// goes through the array and finds the smallest value and it swaps it in the beginning 
