@@ -113,7 +113,12 @@ function formingMagicSquare(s) {
                 }
                 break;
             }
-           
+            case 4: {
+                let beforeChange = newArr[i]
+                newArr[i] = 5
+                changes.push(Math.abs(beforeChange - newArr[i]))
+                break;
+            }
             case 5: {
                 if (newArr[i] == 1) {
                     let beforeChange = newArr[3]
