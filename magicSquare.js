@@ -20,5 +20,31 @@ function formingMagicSquare(s) {
     let changes = []
     let result = 0
     for (let i = 0; i < newArr.length; i++) {
+
+        switch (i) {
+            case 0: {
+                if (newArr[i] == 8) {
+                    let beforeChange = newArr[8]
+                    newArr[8] = 2
+                    changes.push(Math.abs(beforeChange - newArr[8]))
+                }
+                if (newArr[i] == 2) {
+                    let beforeChange = newArr[8]
+                    newArr[8] = 8
+                    changes.push(Math.abs(beforeChange - newArr[8]))
+                }
+                if (newArr[i] == 4) {
+                    let beforeChange = newArr[8]
+                    newArr[8] = 6
+                    changes.push(Math.abs(beforeChange - newArr[8]))
+                }
+                if (newArr[i] == 6) {
+                    let beforeChange = newArr[8]
+                    newArr[8] = 4
+                    changes.push(Math.abs(beforeChange - newArr[8]))
+                }
+            }
+                break;
+        }
     }
 }
