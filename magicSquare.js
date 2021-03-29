@@ -45,6 +45,79 @@ function formingMagicSquare(s) {
                 }
             }
                 break;
+         
+            case 2: {
+                if (newArr[i] == 8) {
+                    let beforeChange = newArr[6]
+                    newArr[6] = 2
+                    changes.push(Math.abs(beforeChange - newArr[6]))
+                }
+                if (newArr[i] == 2) {
+                    let beforeChange = newArr[6]
+                    newArr[6] = 8
+                    changes.push(Math.abs(beforeChange - newArr[6]))
+                }
+                if (newArr[i] == 4) {
+                    let beforeChange = newArr[6]
+                    newArr[6] = 6
+                    changes.push(Math.abs(beforeChange - newArr[6]))
+                }
+                if (newArr[i] == 6) {
+                    let beforeChange = newArr[6]
+                    newArr[6] = 4
+                    changes.push(Math.abs(beforeChange - newArr[6]))
+                }
+            }
+                break;
+            
+            case 6: {
+                if (newArr[i] == 8) {
+                    let beforeChange = newArr[2]
+                    newArr[2] = 2
+                    changes.push(Math.abs(beforeChange - newArr[2]))
+                }
+                if (newArr[i] == 2) {
+                    let beforeChange = newArr[2]
+                    newArr[2] = 8
+                    changes.push(Math.abs(beforeChange - newArr[2]))
+                }
+                if (newArr[i] == 4) {
+                    let beforeChange = newArr[2]
+                    newArr[2] = 6
+                    changes.push(Math.abs(beforeChange - newArr[2]))
+                }
+                if (newArr[i] == 6) {
+                    let beforeChange = newArr[2]
+                    newArr[2] = 4
+                    changes.push(Math.abs(beforeChange - newArr[2]))
+                }
+            }
+                break;
+          
+            case 8: {
+                if (newArr[i] == 8) {
+                    let beforeChange = newArr[0]
+                    newArr[0] = 2
+                    changes.push(Math.abs(beforeChange - newArr[0]))
+                }
+                if (newArr[i] == 2) {
+                    let beforeChange = newArr[0]
+                    newArr[0] = 8
+                    changes.push(Math.abs(beforeChange - newArr[0]))
+                }
+                if (newArr[i] == 4) {
+                    let beforeChange = newArr[0]
+                    newArr[0] = 6
+                    changes.push(Math.abs(beforeChange - newArr[0]))
+                }
+                if (newArr[i] == 6) {
+                    let beforeChange = newArr[0]
+                    newArr[0] = 4
+                    changes.push(Math.abs(beforeChange - newArr[0]))
+                }
+            }
+                break;
+            default:
         }
     }
 }
