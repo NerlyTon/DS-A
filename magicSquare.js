@@ -212,5 +212,11 @@ function formingMagicSquare(s) {
                 break;
             default:
         }
+        result = changes.reduce((acc, cur) => {
+            return acc + cur
+        })
     }
+    console.log("Result: ", result)
+    return result
 }
+
