@@ -5,3 +5,15 @@
 // Numbers surrounding the 5 thats are not corners need to be odd numbers
 // Diagonal corner numbers have the be either [2 and 8] or [4 and 6] because they have to add up to 10 since the sum of the diagonal should be 10 + 5(since 5 is always in the middle)
 // Odd diagonals also have to add up to 10 so the pairs for those are [7 and 3] or [9 and 1]
+
+function formingMagicSquare(s) {
+    // Length of array
+    let n = s[0].length
+    let newArr = []
+    // iterate through matrix, add each element to newArr
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            newArr.push(s[i][j])
+        }
+    }
+}
