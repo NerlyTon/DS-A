@@ -16,4 +16,9 @@ function formingMagicSquare(s) {
             newArr.push(s[i][j])
         }
     }
+
+    let changes = []
+    let result = 0
+    for (let i = 0; i < newArr.length; i++) {
+    }
 }
