@@ -75,3 +75,38 @@ longestConsecutive = (nums) => {
         }
     }
 }
+
+// smallest difference
+// Write a function that takes in two non empty arrays on integers, find the pair of numbers that whose absolute difference in closest to zero.
+
+function smallestDifference(arrayOne, arrayTwo) {
+	arrayOne.sort((a,b) => a - b)
+	arrayTwo.sort((a,b) => a - b)
+	
+  let first = 0
+	let second = 0
+	let smallest = Infinity
+	let current = Infinity
+	let smallestPair = []
+ 
+	while(first < arrayOne.length && second < arrayTwo.length) {
+		let firstNum = arrayOne[first]
+		let secondNum = arrayTwo[second]
+		if(firstNum < secondNum) {
+			current = secondNum - firstNum
+		first ++
+		} else if (secondNum < firstNum) {
+		current = firstNum - secondNum
+		second++
+	} else {
+		return [firstNum, secondNum]
+	}
+	
+	if (smallest > current) {
+		smallest = current
+		smallestPair = [firstNum, secondNum]
+	}
+}
+return smallestPair
+}
+	
