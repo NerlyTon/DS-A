@@ -124,6 +124,7 @@ const array = [1, 2, 3, 4]
 //     return newArray.sort((a, b) => a - b)
 // }
 
+// O(nlogn) time O(n) space
 function sortedSquaredArray(array) {
     const sorted = new Array(array.length).fill(0)
     
