@@ -121,5 +121,5 @@ function sortedSquaredArray(array) {
         const squared = num ** 2
         newArray.push(squared)
     }
-    return newArray
+    return newArray.sort((a, b) => a - b)
 }
