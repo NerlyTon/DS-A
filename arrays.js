@@ -114,9 +114,12 @@ return smallestPair
 // Sorted Squared Array
 
 const array = [1, 2, 3, 4]
+let newArray = []
 
 function sortedSquaredArray(array) {
-    let newArray = array.map((num) => num ** 2)
-
+    for (let num of array) {
+        const squared = num ** 2
+        newArray.push(squared)
+    }
     return newArray
 }
