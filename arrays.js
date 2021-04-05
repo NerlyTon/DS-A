@@ -109,4 +109,14 @@ function smallestDifference(arrayOne, arrayTwo) {
 }
 return smallestPair
 }
-	
+
+
+// Sorted Squared Array
+
+const array = [1, 2, 3, 4]
+
+function sortedSquaredArray(array) {
+    let newArray = array.map((num) => num ** 2)
+
+    return newArray
+}
