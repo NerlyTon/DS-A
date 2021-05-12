@@ -134,3 +134,40 @@ function sortedSquaredArray(array) {
 sorted.sort((a, b) => a - b)
 return sorted;
 }
+
+// array of products
+// solution with division
+// medium 
+function arrayOfProducts(array) {
+    let newArray = []
+      let num = 1
+      let counter = 0
+      let rememberNum 
+      
+      if(array.length === 0) {
+          return array
+      }
+      
+      for(let i = 0; i < array.length; i++) {
+          if(array[i] === 0) {
+              counter += 1
+              rememberNum = i
+                  if(counter > 1) {
+                      return new Array(array.length).fill(0);
+                  } 
+          }
+           num *= array[i] == 0 ? 1 : array[i]
+      }
+      
+      for(let i = 0; i < array.length; i++) {
+          if (i == rememberNum){
+              newArray = new Array(array.length).fill(0);
+              newArray[i] = num
+              return newArray
+          } 
+          let n = num/array[i]
+              newArray.push(n)
+      }
+      
+      return newArray
+  }
