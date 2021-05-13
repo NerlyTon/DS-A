@@ -193,3 +193,20 @@ const sortedArray = array.sort((a, b) => a[0] - b[0])
 	return mergedIntervals
 }
 
+// how to bubble sort
+
+function bubbleSorting(array) {
+let finished = false
+	while(!finished) {
+		finished = true
+		for(let i =1; i < array.length; i++){
+			if(array[i -1][0] > array[i][0]) {
+				finished = false
+				let temp = array[i -1][0]
+				array[i -1][0] = array[i][0]
+				array[i][0] = temp
+			}
+		}
+	}
+    return array
+}
