@@ -210,3 +210,18 @@ let finished = false
 	}
     return array
 }
+
+// first duplicate value
+function firstDuplicateValue(array) {
+  
+      let map = new Map()
+      
+      for(let i = 0; i < array.length; i++) {
+          if(map.has(array[i])) {
+              return array[i]
+          } else {
+              map.set(array[i])
+          }
+      }
+    return -1;
+  }
