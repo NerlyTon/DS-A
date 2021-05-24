@@ -225,3 +225,28 @@ function firstDuplicateValue(array) {
       }
     return -1;
   }
+
+//   monotonic array
+function isMonotonic(array) {
+   
+      let increasing = true
+      let decreasing = true
+      
+      if(array.length === 0 || array.length === 1) {
+          return true
+      }
+      
+      
+      for(let i = 0; i < array.length; i++) {
+              if(array[i] > array[i + 1]) {
+              increasing = false
+          } 
+          
+              if (array[i + 1] > array[i]) {
+              decreasing = false
+          } 
+          
+          }
+      
+      return increasing || decreasing
+      }
